@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 gt-ie8"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="gt-ie8 gt-ie9 not-ie">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>國泰證 CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- url icon -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+
+    <!-- fullCalendar 2.2.5-->
+    <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.print.css" media="print">
+    <style>
+        .fc h2 {
+            font-size: 18px;
+        }
+        .fc-content {
+            font-size: 14px;
+        }
+        .fc-event
+         {
+            line-height: 2;
+        }
+        .fc-unthemed .fc-today {
+            background: none;
+        }
+    </style>
+    <!-- DDSC stylesheets -->
+    <link href="../css/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/themes.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/ddsc.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="js/ie.min.js"></script>
+    <![endif]-->
+
+</head>
+<!-- top & left 固定 -->
+<body class="theme-default main-menu-animated">
+    <script>var init = [];</script>
+    <div id="main-wrapper">
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle">
+                <i class="navbar-icon fa fa-bars icon"></i>
+             <!--   <span class="hide-menu-text">HIDE MENU</span> -->
+            </button>
+            <div class="navbar-inner" >
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <!-- Logo (height: 46px)-->
+                    <a href="index.html">
+                        <div class="navbar-brand">
+                            <img  src="../images/logo.png"  alt="國泰證" ></div>
+                        <!--Product name  (height: 46px)-->
+                       <!--  <div class="navbar-brand" >
+                            <img  src="../images/header_title.png" alt="CRM" >
+                        </div>-->
+                    </a>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse" >
+                    <div>
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <li>
+                                    <a href="#">
+                                        <i class="nav-icon fa fa-bank" style="color: #00a850;" ></i>
+                                        <span>8880 國泰台北</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="nav-icon fa fa-user" style="color: #00a850";"></i>
+                                        <span>8880001 8880001</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html">
+                                        <i class="nav-icon fa fa-home" style="color: #00a850;"></i>
+                                        <span class="small-screen-text">首頁</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signin.html">
+                                        <i class="nav-icon glyphicon glyphicon-log-out" style="color: #00a850;"></i>
+                                        <span class="small-screen-text">登出</span>
+                                        <span id="clock" class="label bg-danger"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- / .navbar-nav -->
+                        </div>
+                        <!-- / .right -->
+                    </div>
+                </div>
+                <!-- / #main-navbar-collapse -->
+            </div>
+            <!-- / .navbar-inner -->
+        </div>
+        <div class="col-lg-12" style="width: 100%;height: 4px;background: #fff200;"></div>
+        <!-- / #main-navbar -->
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner" class="theme-clean">
+                <div class="menu-content top"  id="menu-content-demo">
+                    <div>
+                        <div class="text-bg"><span class="text-slim">服務客戶</span> <span class="text-semibold">錢大戶</span></div>
+                        <!--<img src="../images/user.jpg" alt="" class="">-->
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-primary"><i class="fa fa-eye"> 全覽</i></a>
+                            <a href="#" class="btn btn-primary"><i class="fa fa-comment"> 新增訪談</i></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navigation">
+                    <li >
+                        <a href="Index.html"><i class="menu-icon fa fa-home"></i><span class="mm-text"> 理專首頁</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="Dashboard.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text"> 理專儀表板</span></a>
+                    </li>
+                    <li>
+                        <a href="Calendar.html"><i class="menu-icon fa fa-calendar"></i><span class="mm-text"> 行事曆</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-eye"></i><span class="mm-text"> 顧客全覽</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="Position.html"><span class="mm-text"> 客戶部位(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="Transcation.html"><span class="mm-text"> 交易紀錄(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="GainLoss.html"><span class="mm-text"> 實現損益(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="Contribution.html"><span class="mm-text"> 貢獻度</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CapitalStructure.html"><span class="mm-text"> 資產結構</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CustomerInfo.html"><span class="mm-text"> 客戶資訊</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="VisitLog.html"><span class="mm-text"> 訪談紀錄</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CustomerSignature.html"><span class="mm-text"> 簽署文件</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- / .navigation -->
+            </div>
+            <!-- / #main-menu-inner -->
+        </div>
+        <!-- / #main-menu -->
+        <div id="content-wrapper">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    身分證號 <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="active">
+                                        <a href="#"><i class="fa fa-check"></i>身分證號</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">姓名(模糊)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">姓名(精準)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input class="form-control" type="text" placeholder="快速搜尋...">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary">
+                                    <i class="fa fa-fw fa-search fa-lg padding-xs-hr "></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / .page-header -->
+            <!-- Main content -->
+            <section class="content no-padding-hr">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-bar-chart-o text-success"></i>客戶貢獻度</span>
+                            </div> <!-- / .panel-heading -->
+                            <!-- Without vertical padding -->
+                            <div class="panel-body">
+                                <div class="col-md-12 col-lg-9">
+                                    <table class="table table-bordered table-hover">
+                                        <tr class="bg-panel">
+                                            <th rowspan="3" class="text-center"></th>
+                                            <th rowspan="3" class="text-center" style="vertical-align:middle;">每月責任額</th>
+                                            <th rowspan="3" class="text-center" style="vertical-align:middle;">上月淨手續費收入合計數</th>
+                                            <th colspan="6" class="text-center">本月淨手續費收入</th>
+                                            <th rowspan="3" class="text-center" style="vertical-align:middle;">月累計淨手收/每月固定薪資</th>
+                                            <th rowspan="3" class="text-center" style="vertical-align:middle;">OSU業務淨手收/單月淨手收合計數</th>
+                                            <th colspan="3" class="text-center">銷售獎金提撥比</th>
+                                        </tr>    
+                                        <tr class="bg-panel">
+                                            <th colspan="4" class="text-center">自拓客戶</th>
+                                            <th rowspan="2" class="text-center" style="vertical-align:middle;">資源客戶</th>
+                                            <th rowspan="2" class="text-center" style="vertical-align:middle;">合計</th>
+                                            <th colspan="2" class="text-center">自拓客戶</th>
+                                            <th rowspan="2" class="text-center" style="vertical-align:middle;">資源客戶</th>
+                                        </tr>
+                                        <tr class="bg-panel">
+                                            <th class="text-center">複委託</th>
+                                            <th class="text-center">OSU</th>
+                                            <th class="text-center">其他</th>
+                                            <th class="text-center">Trailer Fee</th>
+                                            <th class="text-center">複委託</th>
+                                            <th class="text-center">OSU</th>
+                                        </tr>
+                                        <tr class="text-right">
+                                            <td style="word-break:keep-all">1月</td>
+                                            <td>300,000</td>
+                                            <td>605,016</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>7.28</td>
+                                            <td>0</td>
+                                            <td>32%</td>
+                                            <td>0%</td>
+                                            <td>22%</td>
+                                        </tr>
+                                        <tr class="text-right">
+                                            <td>2月</td>
+                                            <td>300,000</td>
+                                            <td>605,016</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>7.28</td>
+                                            <td>0</td>
+                                            <td>32%</td>
+                                            <td>0%</td>
+                                            <td>22%</td>
+                                        </tr>
+                                        <tr class="text-right">
+                                            <td>3月</td>
+                                            <td>300,000</td>
+                                            <td>605,016</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>7.28</td>
+                                            <td>0</td>
+                                            <td>32%</td>
+                                            <td>0%</td>
+                                            <td>22%</td>
+                                        </tr>
+                                        <tr class="text-right">
+                                            <td>4月</td>
+                                            <td>300,000</td>
+                                            <td>605,016</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>7.28</td>
+                                            <td>0</td>
+                                            <td>32%</td>
+                                            <td>0%</td>
+                                            <td>22%</td>
+                                        </tr>
+                                        <tr class="text-right">
+                                            <td>5月</td>
+                                            <td>300,000</td>
+                                            <td>605,016</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>7.28</td>
+                                            <td>0</td>
+                                            <td>32%</td>
+                                            <td>0%</td>
+                                            <td>22%</td>
+                                        </tr>
+                                        <tr class="text-right">
+                                            <td>6月</td>
+                                            <td>300,000</td>
+                                            <td>605,016</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>7.28</td>
+                                            <td>0</td>
+                                            <td>32%</td>
+                                            <td>0%</td>
+                                            <td>22%</td>
+                                        </tr>
+                                        <tr class="text-right">
+                                            <td>7月</td>
+                                            <td>300,000</td>
+                                            <td>605,016</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>7.28</td>
+                                            <td>0</td>
+                                            <td>32%</td>
+                                            <td>0%</td>
+                                            <td>22%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-12 col-lg-3">
+                                    <div id="container" style="min-width: 200px; height: 400px; margin: 0 auto"></div>
+                                </div>
+                            </div> <!-- / .panel-body -->
+                        </div> <!-- / .panel -->
+                    </div>
+                </div>
+                <div class="row ">
+                    <!-- 前50大顧客資產時序變化-->
+                    <div class="col-md-12 col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-cubes text-success"></i>前50大顧客資產時序變化</span>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="panel-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr class="bg-panel">
+                                            <th class="no-padding-hr text text-center">資產項目平均餘額</>
+                                            <th class="no-padding-hr text text-center">基金餘額</th>
+                                            <th class="no-padding-hr text text-center">股票餘額</th>
+                                            <th class="no-padding-hr text text-center">債券餘額</th>
+                                            <th class="no-padding-hr text text-center">總AUM餘額</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">目前</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1個月前</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">3個月前</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">半年前</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1年前</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span class="pull-right">單位：百萬元</span>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <div class="row ">
+                    <!-- 顧客投資資產報酬率－依顧客-->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="panel-title-icon fa fa-cubes text-success"></i>顧客投資資產報酬率－依顧客</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="panel-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr class="bg-panel">
+                                            <th class="no-padding-hr text text-center">報酬率級距</>
+                                            <th class="no-padding-hr text text-center">客戶人數</th>
+                                            <th class="no-padding-hr text text-center">投資AUM(本金)</th>
+                                            <th class="no-padding-hr text text-center">投資淨額</th>
+                                            <th class="no-padding-hr text text-center">損益金額</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">15%以上</td>
+                                            <td class="text-right">1</td>
+                                            <td class="text-right">135,872,244</td>
+                                            <td class="text-right">114,916,999,385</td>
+                                            <td class="text-right">114,784,093,672</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">10%~15%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">5%~10%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~5%</td>
+                                            <td class="text-right">2</td>
+                                            <td class="text-right">39,764,765</td>
+                                            <td class="text-right">397,465,327</td>
+                                            <td class="text-right">357,544,103</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~-5%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-10%~-5%</td>
+                                            <td class="text-right">1</td>
+                                            <td class="text-right">53,588,738</td>
+                                            <td class="text-right">57,847,221</td>
+                                            <td class="text-right">3,565,494</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%~-10%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%以上</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                    <!--顧客投資資產報酬率－依信託編號-->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="panel-title-icon fa fa-cubes text-success"></i>顧客投資資產報酬率－依信託編號</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="panel-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr class="bg-panel">
+                                            <th class="no-padding-hr text text-center">報酬率級距</>
+                                            <th class="no-padding-hr text text-center">憑證筆數</th>
+                                            <th class="no-padding-hr text text-center">投資AUM(本金)</th>
+                                            <th class="no-padding-hr text text-center">投資淨額</th>
+                                            <th class="no-padding-hr text text-center">損益金額</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">15%以上</td>
+                                            <td class="text-right">52</td>
+                                            <td class="text-right">57,372,880</td>
+                                            <td class="text-right">114,916,999,385</td>
+                                            <td class="text-right">114,784,093,672</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">10%~15%</td>
+                                            <td class="text-right">1</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">5%~10%</td>
+                                            <td class="text-right">8</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~5%</td>
+                                            <td class="text-right">687</td>
+                                            <td class="text-right">23,261,202</td>
+                                            <td class="text-right">31,905,344</td>
+                                            <td class="text-right">8,633,539</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~-5%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-10%~-5%</td>
+                                            <td class="text-right">9</td>
+                                            <td class="text-right">564,560</td>
+                                            <td class="text-right">548,673</td>
+                                            <td class="text-right">-45,343</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%~-10%</td>
+                                            <td class="text-right">2</td>
+                                            <td class="text-right">1,353,600</td>
+                                            <td class="text-right">1,227,598</td>
+                                            <td class="text-right">-156,082</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%以上</td>
+                                            <td class="text-right">169</td>
+                                            <td class="text-right">116,197,187</td>
+                                            <td class="text-right">16,254,264</td>
+                                            <td class="text-right">-100,657,322</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </section>
+
+            <!-- / #content-wrapper -->
+            <div id="main-menu-bg"></div>
+        </div>
+    </div>
+    <!-- / #main-wrapper -->
+
+    <!-- jQuery v1.11.3  -->
+    <script src="../plugins/jquery/jQuery.min.js"></script>
+
+    <!-- Bootstrap  -->
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- jQuery UI - v1.11.4   -->
+    <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
+
+    <!-- DDSC javascripts -->
+    <script src="../js/ddsc.min.js"></script>
+    <script src="../js/app.min.js"></script>
+    <script type="text/javascript">
+        init.push(function () {
+            // Javascript code here
+        })
+        window.ddsc.start(init);
+    </script>
+
+    <!-- jquery countdown -->
+    <script src="../plugins/jQuery/jquery.countdown-2.1.0/jquery.countdown.min.js"></script>
+
+    <script type="text/javascript">
+        function gettimeFromNow() {
+            return new Date(new Date().valueOf() + 30 * 60 * 1000);
+        }
+        var $clock = $('#clock');
+        $clock.countdown(gettimeFromNow(), function (event) {
+            $(this).html(event.strftime('%M:%S'));
+        });
+        $('#btn-reset').click(function () {
+            $clock.countdown(gettimeFromNow());
+        });
+    </script>
+    <!-- 當月達成率 -->        
+    <script src="../plugins/highcharts/highcharts.js"></script>
+    <script src="../plugins/highcharts/modules/exporting.js"></script>
+    <script src="../plugins/highcharts/modules/offline-exporting.js"></script>
+    <script>
+        $(function () {
+            Highcharts.setOptions({
+                chart: {
+                    style: {
+                        fontFamily: 'Microsoft JhengHei'
+                    }
+                }
+            });
+            $('#container').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: '當月達成率'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                exporting: { enabled: false },
+                series: [{
+                    name: ' ',
+                    colorByPoint: true,
+                    data: [{
+                        color: '#068454',
+                        tooltip: '300K',
+                        y: 80
+                    }, {
+                        color: '#fff200',
+                        tooltip: '0',
+                        y: 20
+                    }]
+                }]
+            });
+        });
+    </script>
+</body>
+</html>

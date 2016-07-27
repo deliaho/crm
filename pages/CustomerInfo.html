@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 gt-ie8"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="gt-ie8 gt-ie9 not-ie">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>國泰證 CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- url icon -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+
+    <!-- DDSC stylesheets -->
+    <link href="../css/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/themes.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/ddsc.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="js/ie.min.js"></script>
+    <![endif]-->
+
+</head>
+<!-- top & left 固定 -->
+<body class="theme-default main-menu-animated">
+    <script>var init = [];</script>
+    <div id="main-wrapper">
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle">
+                <i class="navbar-icon fa fa-bars icon"></i>
+                <!--   <span class="hide-menu-text">HIDE MENU</span> -->
+            </button>
+            <div class="navbar-inner">
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <!-- Logo (height: 46px)-->
+                    <a href="index.html">
+                        <div class="navbar-brand">
+                            <img src="../images/logo.png" alt="國泰證">
+                        </div>
+                        <!--Product name  (height: 46px)-->
+                        <!--  <div class="navbar-brand" >
+                             <img  src="../images/header_title.png" alt="CRM" >
+                         </div>-->
+                    </a>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <li>
+                                    <a href="#">
+                                        <i class="nav-icon fa fa-bank" style="color: #00a850;"></i>
+                                        <span>8880 國泰台北</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="nav-icon fa fa-user" style="color: #00a850" ;"></i>
+                                        <span>8880001 8880001</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html">
+                                        <i class="nav-icon fa fa-home" style="color: #00a850;"></i>
+                                        <span class="small-screen-text">首頁</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signin.html">
+                                        <i class="nav-icon glyphicon glyphicon-log-out" style="color: #00a850;"></i>
+                                        <span class="small-screen-text">登出</span>
+                                        <span id="clock" class="label bg-danger"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- / .navbar-nav -->
+                        </div>
+                        <!-- / .right -->
+                    </div>
+                </div>
+                <!-- / #main-navbar-collapse -->
+            </div>
+            <!-- / .navbar-inner -->
+        </div>
+        <div class="col-lg-12" style="width: 100%;height: 4px;background: #fff200;"></div>
+        <!-- / #main-navbar -->
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner" class="theme-clean">
+                <div class="menu-content top" id="menu-content-demo">
+                    <div>
+                        <div class="text-bg"><span class="text-slim">服務客戶</span> <span class="text-semibold">錢大戶</span></div>
+                        <!--<img src="../images/user.jpg" alt="" class="">-->
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-primary"><i class="fa fa-eye"> 全覽</i></a>
+                            <a href="#" class="btn btn-primary"><i class="fa fa-comment"> 新增訪談</i></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navigation">
+                    <li>
+                        <a href="Index.html"><i class="menu-icon fa fa-home"></i><span class="mm-text"> 理專首頁</span></a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text"> 理專儀表板</span></a>
+                    </li>
+                    <li>
+                        <a href="Calendar.html"><i class="menu-icon fa fa-calendar"></i><span class="mm-text"> 行事曆</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-eye"></i><span class="mm-text"> 顧客全覽</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="Position.html"><span class="mm-text"> 客戶部位(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="Transcation.html"><span class="mm-text"> 交易紀錄(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="GainLoss.html"><span class="mm-text"> 實現損益(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="Contribution.html"><span class="mm-text"> 貢獻度</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CapitalStructure.html"><span class="mm-text"> 資產結構</span></a>
+                            </li>
+                            <li class="active">
+                                <a tabindex="-1" href="CustomerInfo.html"><span class="mm-text"> 客戶資訊</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="VisitLog.html"><span class="mm-text"> 訪談紀錄</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CustomerSignature.html"><span class="mm-text"> 簽署文件</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- / .navigation -->
+            </div>
+            <!-- / #main-menu-inner -->
+        </div>
+        <!-- / #main-menu -->
+        <div id="content-wrapper">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    身分證號 <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="active">
+                                        <a href="#"><i class="fa fa-check"></i>身分證號</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">姓名(模糊)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">姓名(精準)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input class="form-control" type="text" placeholder="快速搜尋...">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary">
+                                    <i class="fa fa-fw fa-search fa-lg padding-xs-hr "></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / .page-header -->
+            <!-- Main content -->
+            <section class="content no-padding-hr">
+                <div class="row ">
+                    <!-- 客戶全覽 -->
+                    <div class="col-md-12 col-lg-5">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-user text-success"></i>客戶全覽</span>
+                            </div>
+                            <div class="panel-body">
+                                <span class="text-bg">客戶姓名： 錢大戶 </span>
+                            </div>
+                            <!-- List group -->
+                            <ul class="list-group">
+                                <li class="list-group-item">身分證號： A100000010 </li>
+                                <li class="list-group-item">客戶分級： </li>
+                                <li class="list-group-item">通訊電話： (02)9999-9999</li>
+                                <li class="list-group-item">手機電話： 0910-999-999 </li>
+                                <li class="list-group-item"><a href="#"><i class="fa fa-plus-square pull-right"></i>提醒事項：基金停損停利(1)</a></li>
+                                <li class="list-group-item">通訊地址： 台北市內湖區行愛路151號</li>
+                                <li class="list-group-item"><a href="Transcation.html"><i class="fa fa-plus-square pull-right"></i>最近交易： 6/15 申購 CNY5,688</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 訪談紀錄 -->
+                    <div class="col-md-12 col-lg-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-comments text-success"></i>訪談紀錄</span>
+                                <div class="panel-heading-controls">
+                                    <button class="btn btn-primary" title="進階查詢"><i class="fa fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                               <form class="form-inline">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control" name="daterange" style="min-width: 200px;" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label sr-only">訪談內容</label>
+                                        <input class="form-control" placeholder="訪談內容" style="min-width: 200px;" >
+                                        <button class="btn btn-primary">搜尋</button>
+                                    </div>
+
+                                </form>
+                                <table class="table table-bordered table-hover" style="margin-top: 20px;">
+                                    <thead>
+                                        <tr class="bg-panel">
+                                            <th class="text-center">訪談日期</th>
+                                            <th class="text-center">訪談內容</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+                    <!-- 整體資產 -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5">
+                            <div class="panel panel-default">
+                                <div class="panel-heading with-border">
+                                    <span class="panel-title">
+                                        <i class="panel-title-icon fa fa-pie-chart text-success"></i>整體資產
+                                    </span>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel-body chart-responsive">
+                                        <div id="container" class="chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                        </div>
+                        <!-- 投資庫存 -->
+                        <div class="col-md-12 col-lg-7">
+                            <div class="panel panel-default">
+                                <div class="panel-heading with-border">
+                                    <span class="panel-title"><i class="panel-title-icon fa fa-cube text-success"></i>投資庫存</span>
+                                </div>
+                                <div class="panel-body" style="min-height:400px;">
+                                    <ul id="uidemo-tabs-default-demo" class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#uidemo-tabs-1" data-toggle="tab">股票</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#uidemo-tabs-2" data-toggle="tab">債券</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#uidemo-tabs-3" data-toggle="tab">基金</a>
+                                        </li>
+                                        <!-- / .dropdown -->
+                                    </ul>
+                                    <div class="tab-content tab-content-bordered">
+                                        <div class="tab-pane fade active in" id="uidemo-tabs-1">
+                                            <table class="table table-bordered table-hover" name="datatable">
+                                                <thead>
+                                                    <tr class="bg-panel">
+                                                        <th class="text-center">商品名稱</th>
+                                                        <th class="text-center">投資幣別</th>
+                                                        <th class="text-center">投資金額(含手續費)</th>
+                                                        <th class="text-center">參考市值(元)</th>
+                                                        <th class="text-center">報酬率</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1812 晨鳴紙業 </td>
+                                                        <td class="text-center">TWD</td>
+                                                        <td class="text-right">318,000</td>
+                                                        <td class="text-right">390,000</td>
+                                                        <td class="text-right">22.64%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>600012 皖通高速</td>
+                                                        <td class="text-center">TWD</td>
+                                                        <td class="text-right">10,002</td>
+                                                        <td class="text-right">3,215</td>
+                                                        <td class="text-right text-red">-66.86%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>600009 上海機場</td>
+                                                        <td class="text-center">TWD</td>
+                                                        <td class="text-right">10,002</td>
+                                                        <td class="text-right">2,000</td>
+                                                        <td class="text-right text-red">-80.00%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- / .tab-pane -->
+                                        <div class="tab-pane fade" id="uidemo-tabs-2">
+                                            <table class="table table-bordered table-hover" name="datatable">
+                                                <thead>
+                                                    <tr class="bg-panel">
+                                                        <th class="text-center">帳戶號碼</th>
+                                                        <th class="text-center">產品名稱</th>
+                                                        <th class="text-center">投資幣別</th>
+                                                        <th class="text-center">投資金額(含手續費)</th>
+                                                        <th class="text-center">參考市值(元)</th>
+                                                        <th class="text-center">報酬率</th>
+                                                    </tr>
+                                                </thead>
+
+                                            </table>
+                                        </div>
+                                        <!-- / .tab-pane -->
+                                        <div class="tab-pane fade" id="uidemo-tabs-3">
+                                            <table class="table table-bordered table-hover" name="datatable">
+                                                <thead>
+                                                    <tr class="bg-panel">
+                                                        <th class="text-center">投資方式</th>
+                                                        <th class="text-center">帳戶號碼</th>
+                                                        <th class="text-center">產品名稱</th>
+                                                        <th class="text-center">投資幣別</th>
+                                                        <th class="text-center">投資金額(含手續費)</th>
+                                                        <th class="text-center">參考市值(元)</th>
+                                                        <th class="text-center">報酬率</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>定期(不)定額</td>
+                                                        <td>00320000606</td>
+                                                        <td>1518 柏瑞印度</td>
+                                                        <td class="text-center">NTD</td>
+                                                        <td class="text-right">121,800</td>
+                                                        <td class="text-right">121,800</td>
+                                                        <td class="text-right">0.55%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>定期(不)定額</td>
+                                                        <td>00007090334</td>
+                                                        <td>0913 德盛香港</td>
+                                                        <td class="text-center">NTD</td>
+                                                        <td class="text-right">116,198</td>
+                                                        <td class="text-right">116,198</td>
+                                                        <td class="text-right">0.16%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>定期(不)定額</td>
+                                                        <td>00320000054</td>
+                                                        <td>0913 德盛香港</td>
+                                                        <td class="text-center">NTD</td>
+                                                        <td class="text-right">121,091</td>
+                                                        <td class="text-right">121,091</td>
+                                                        <td class="text-right">0.05%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>定期(不)定額</td>
+                                                        <td>00320000402</td>
+                                                        <td>0157 摩根中國</td>
+                                                        <td class="text-center">NTD</td>
+                                                        <td class="text-right">228,217</td>
+                                                        <td class="text-right">228,217</td>
+                                                        <td class="text-right">0.01%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>定期(不)定額</td>
+                                                        <td>00007090338</td>
+                                                        <td>1323 聯博印度Ａ</td>
+                                                        <td class="text-center">NTD</td>
+                                                        <td class="text-right">145,975</td>
+                                                        <td class="text-right">145,975</td>
+                                                        <td class="text-right text-red">-0.01%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>定期(不)定額</td>
+                                                        <td>00007077379</td>
+                                                        <td>1315 聯全高收美</td>
+                                                        <td class="text-center">NTD</td>
+                                                        <td class="text-right">201,500</td>
+                                                        <td class="text-right">201,500</td>
+                                                        <td class="text-right text-red">-0.06%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- / .tab-pane -->
+                                    </div>
+                                    <!-- / .tab-content -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- / #content-wrapper -->
+            <div id="main-menu-bg"></div>
+        </div>
+    </div>
+    <!-- / #main-wrapper -->
+    <!-- jQuery v1.11.3  -->
+    <script src="../plugins/jquery/jQuery.min.js"></script>
+
+    <!-- Bootstrap  -->
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- jQuery UI - v1.11.4   -->
+    <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
+
+    <!-- DDSC javascripts -->
+    <script src="../js/ddsc.min.js"></script>
+    <script src="../js/app.min.js"></script>
+    <script type="text/javascript">
+        init.push(function () {
+            // Javascript code here
+        })
+        window.ddsc.start(init);
+    </script>
+
+    <!-- jquery countdown -->
+    <script src="../plugins/jQuery/jquery.countdown-2.1.0/jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+        function gettimeFromNow() {
+            return new Date(new Date().valueOf() + 30 * 60 * 1000);
+        }
+        var $clock = $('#clock');
+        $clock.countdown(gettimeFromNow(), function (event) {
+            $(this).html(event.strftime('%M:%S'));
+        });
+        $('#btn-reset').click(function () {
+            $clock.countdown(gettimeFromNow());
+        });
+    </script>
+
+    <!-- date-range-picker -->
+    <script src="../plugins/daterangepicker/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <script>
+        $(function () {
+            //Date range picker
+            $('input[name="daterange"]').daterangepicker(
+                {
+                    singleDatePicker: false,
+                    showDropdowns: true,
+                    showWeekNumbers: false,
+                    timePicker: false,
+                    timePicker24Hour: false,
+                    timePickerSeconds: false,
+                    autoApply: true,
+                    opens: 'center',
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary',
+                    cancelClass: 'btn-small',
+                    firstDay: 1,
+                    separator: " - ",
+                    // 預設查最近7天
+                    startDate: moment().subtract(6, 'days'),
+                    endDate: moment(),
+                    // 最大日放在後7天，查預約交易
+                    maxDate: moment().add(7,'days'),
+                    // 最多查5年內的資料
+                    minDate: moment().subtract(5, 'years'),
+                    // 資料範圍30天
+                    dateLimit: {
+                        "days": 30
+                    },
+                    ranges: {
+                        '今天': [moment(), moment()],
+                        '昨天': [moment().subtract(1,'days'), moment().subtract(1, 'days')],
+                        '最近7天': [moment().subtract(6, 'days'), moment()],
+                        '最近30天': [moment().subtract(29, 'days'), moment()],
+                        '本月': [moment().startOf('month'), moment().endOf('month')],
+                        '上個月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    locale: {
+                        format: "YYYY/MM/DD",
+                        applyLabel: '<i class="glyphicon glyphicon-ok"></i>',
+                        cancelLabel: '<i class="glyphicon glyphicon-remove"></i>',
+                        fromLabel: '起',
+                        toLabel: '訖',
+                        customRangeLabel: '自訂範圍',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月'],
+                    }
+                });
+        });
+    </script>
+
+    <!-- 整理資產 -->
+    <script src="../plugins/highcharts/highcharts.js"></script>
+    <script src="../plugins/highcharts/modules/exporting.js"></script>
+    <script src="../plugins/highcharts/modules/offline-exporting.js"></script>
+    <script>
+        $(function () {
+            Highcharts.setOptions({
+                chart: {
+                    style: {
+                        fontFamily: 'Microsoft JhengHei'
+                    }
+                },
+                lang: {
+                    decimalPoint: '.',
+                    thousandsSep: ','
+                }
+            });
+            $('#container').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: '整體資產 折台現值 130,278,775元'
+                },
+                tooltip: {
+                    pointFormat: '{point.percentage:.0f} %',     // 千分號 以及 0小數位
+
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: <b>${point.y:,.0f} 元</b>',
+
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                exporting: { enabled: false },
+                series: [{
+                    name: null,
+                    colorByPoint: true,
+                    data: [{
+                        name: '海外股票',
+                        y: 58574857
+                    }, {
+                        name: '基金',
+                        y: 48013900,
+                    }, {
+                        name: '債券',
+                        y: 23600000
+                    }]
+                }]
+            });
+        });
+    </script>
+    <!-- DataTables -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('table[name="datatable"]').DataTable({
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
+                    }
+                },
+                "paging": true,
+                "pageLength": 5,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false
+            });
+        });
+    </script>
+</body>
+</html>

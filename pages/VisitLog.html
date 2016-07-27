@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>國泰證 CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- url icon -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap-theme.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+
+    <!-- fullCalendar 2.2.5-->
+    <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.print.css" media="print">
+    <style>
+        .fc h2 {
+            font-size: 18px;
+        }
+
+        .fc-content {
+            font-size: 14px;
+        }
+
+        .fc-event {
+            line-height: 2;
+        }
+
+        .fc-unthemed .fc-today {
+            background: none;
+        }
+    </style>
+    <!-- DDSC stylesheets -->
+    <link href="../css/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/themes.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/ddsc.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="js/ie.min.js"></script>
+    <![endif]-->
+
+</head>
+<!-- top & left 固定 -->
+<body class="theme-default main-menu-animated">
+    <script>var init = [];</script>
+    <div id="main-wrapper">
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle">
+                <i class="navbar-icon fa fa-bars icon"></i>
+                <!--   <span class="hide-menu-text">HIDE MENU</span> -->
+            </button>
+            <div class="navbar-inner">
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <!-- Logo (height: 46px)-->
+                    <a href="index.html">
+                        <div class="navbar-brand">
+                            <img src="../images/logo.png" alt="國泰證">
+                        </div>
+                        <!--Product name  (height: 46px)-->
+                        <!--  <div class="navbar-brand" >
+                             <img  src="../images/header_title.png" alt="CRM" >
+                         </div>-->
+                    </a>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <li>
+                                    <a href="#">
+                                        <i class="nav-icon fa fa-bank" style="color: #00a850;"></i>
+                                        <span>8880 國泰台北</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="nav-icon fa fa-user" style="color: #00a850" ;"></i>
+                                        <span>8880001 8880001</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html">
+                                        <i class="nav-icon fa fa-home" style="color: #00a850;"></i>
+                                        <span class="small-screen-text">首頁</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signin.html">
+                                        <i class="nav-icon glyphicon glyphicon-log-out" style="color: #00a850;"></i>
+                                        <span class="small-screen-text">登出</span>
+                                        <span id="clock" class="label bg-danger"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- / .navbar-nav -->
+                        </div>
+                        <!-- / .right -->
+                    </div>
+                </div>
+                <!-- / #main-navbar-collapse -->
+            </div>
+            <!-- / .navbar-inner -->
+        </div>
+        <div class="col-lg-12" style="width: 100%;height: 4px;background: #fff200;"></div>
+        <!-- / #main-navbar -->
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner" class="theme-clean">
+                <div class="menu-content top" id="menu-content-demo">
+                    <div>
+                        <div class="text-bg"><span class="text-slim">服務客戶</span> <span class="text-semibold">錢大戶</span></div>
+                        <!--<img src="../images/user.jpg" alt="" class="">-->
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-primary"><i class="fa fa-eye"> 全覽</i></a>
+                            <a href="#" class="btn btn-primary"><i class="fa fa-comment"> 新增訪談</i></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navigation">
+                    <li class="active">
+                        <a href="Index.html"><i class="menu-icon fa fa-home"></i><span class="mm-text"> 理專首頁</span></a>
+                    </li>
+                    <li>
+                        <a href="Dashboard.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text"> 理專儀表板</span></a>
+                    </li>
+                    <li>
+                        <a href="Calendar.html"><i class="menu-icon fa fa-calendar"></i><span class="mm-text"> 行事曆</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-eye"></i><span class="mm-text"> 顧客全覽</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="Position.html"><span class="mm-text"> 客戶部位(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="Transcation.html"><span class="mm-text"> 交易紀錄(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="GainLoss.html"><span class="mm-text"> 實現損益(即)</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="Contribution.html"><span class="mm-text"> 貢獻度</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CapitalStructure.html"><span class="mm-text"> 資產結構</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CustomerInfo.html"><span class="mm-text"> 客戶資訊</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="VisitLog.html"><span class="mm-text"> 訪談紀錄</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="CustomerSignature.html"><span class="mm-text"> 簽署文件</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- / .navigation -->
+            </div>
+            <!-- / #main-menu-inner -->
+        </div>
+        <!-- / #main-menu -->
+        <div id="content-wrapper">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    身分證號 <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="active">
+                                        <a href="#"><i class="fa fa-check"></i>身分證號</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">姓名(模糊)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">姓名(精準)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input class="form-control" type="text" placeholder="快速搜尋...">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary">
+                                    <i class="fa fa-fw fa-search fa-lg padding-xs-hr "></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / .page-header -->
+            <!-- Main content -->
+            <section class="content no-padding-hr">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel-group no-margin-b" id="accordion-example">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" style="font-size: 16px;">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1">訪談紀錄 </a>
+                                    </div>
+                                    <!-- / .panel-heading -->
+                                    <div id="collapse1" class="panel-collapse in">
+                                        <div class="panel-body" style="padding-bottom: 0;">
+                                            <form class="form-horizontal" id="jq-validation-form">
+                                                <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
+                                                    <label class="control-label text-danger">訪談日期</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                        <input type="text" class="form-control" name="daterange" style="width: 200px;" required="required">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
+                                                    <label class="control-label">訪談內容</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
+                                                    <label class="control-label">客戶姓名</label>
+                                                    <input type="text" name="name" value="陳Ｏ成" class="form-control" style="width: 150px;">
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2 form-group no-margin-hr ">
+                                                    <label class="control-label">客戶身分證號</label>
+                                                    <input type="text" name="id" value="A123456789" class="form-control" style="width: 150px;">
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
+                                                    <label class="control-label">追蹤名單</label>
+                                                    <select class="select2 form-control select2-drop-auto-width" autofocus>
+                                                        <option value="*">全部</option>
+                                                        <option value="1">是</option>
+                                                        <option value="2">否</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
+                                                    <label class="control-label">追蹤期限</label>
+                                                    <select class="select2 form-control select2-drop-auto-width" autofocus>
+                                                        <option value="*">全部</option>
+                                                        <option value="1">過期</option>
+                                                        <option value="2">有效</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-1 form-group">
+                                                    <button type="submit" class="btn btn-primary" style="margin-top:30px;"><i class="fa fa-search margin-r-5"></i>搜尋</button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <!-- / .panel-body -->
+                                    </div>
+                                    <!-- / .collapse -->
+                                </div>
+                                <!-- / .panel -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading hidden">
+                                    <span class="panel-title">With buttons</span>
+                                    <div class="panel-heading-controls">
+                                        <button class="btn btn-xs btn-warning btn-outline"><span class="fa fa-refresh"></span>&nbsp;&nbsp;Refresh</button>
+                                        <button class="btn btn-xs btn-danger btn-outline"><span class="fa fa-paperclip"></span></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#visitModal">新增</button>
+                                    </div>
+                                    <!-- / .panel-heading-controls -->
+                                </div>
+                                <!-- / .panel-heading -->
+                                <div class="panel-body">
+                                    <table id="table1" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr class=" bg-gray-light">
+                                                <th class="text-center no-padding-hr">SN</th>
+                                                <th class="text-center no-padding-hr" style="width:100px;">操作</th>
+                                                <th class="text-center">訪談日期</th>
+                                                <th class="text-center">客戶姓名</th>
+                                                <th class="text-center">所屬理專</th>
+                                                <th class="text-center">訪談理專</th>
+                                                <th class="text-center">訪談結果</th>
+                                                <th class="text-center">覆核主管</th>
+                                                <th class="text-center">訪談內容</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-right">1</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open  text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="word-break: break-all">顧客無意願 - 申請/作業手續麻煩</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">2</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="word-break: break-all">顧客有意願 - 完成銷售/任務(關懷,滿意度調查..),不需轉介</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">3</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open  text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="word-break: break-all">顧客有意願 - 完成銷售，需轉介</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">4</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open  text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>完成轉換</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">既有客戶保險</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">5</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open  text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>成交</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">既有客戶一般性拜訪基金未成交理由</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">6</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open  text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>完成通知 </td>
+                                                <td></td>
+                                                <td style="word-break: break-all">通知"創利全球焦"贖回金額:NTD 136,679</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">7</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open  text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>考慮中</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">轉介(轉介行員)市場分析手收</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">8</td>
+                                                <td class="text-center no-padding-hr">
+                                                    <a href="#" title="查詢"><i class="glyphicon glyphicon-eye-open  text-green"></i> &nbsp &nbsp</a>
+                                                    <a href="#" title="修改"><i class="glyphicon glyphicon-pencil text-blue"></i>&nbsp &nbsp</a>
+                                                    <a href="#" title="刪除"><i class="glyphicon glyphicon-trash text-red"></i></a>
+                                                </td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>考慮中</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">既有客戶市場分析黃金存摺一般性拜訪</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Large modal -->
+                    <div id="visitModal" class="modal fade" tabindex="-1" role="dialog" style="display: none; ">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModalLabel">訪談紀錄</h4>
+                                </div>
+                                <div class="modal-body no-padding">
+                                    <iframe class="col-md-12 no-border no-padding" height="830"></iframe>
+                                </div>
+                                <!-- / .modal-body -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉視窗</button>
+                                </div>
+                            </div>
+                            <!-- / .modal-content -->
+                        </div>
+                        <!-- / .modal-dialog -->
+                    </div>
+                    <!-- / .modal -->
+                    <!-- / Large modal -->
+                </section>
+                <!-- / #content-wrapper -->
+                <div id="main-menu-bg"></div>
+        </div>
+    </div>
+    <!-- / #main-wrapper -->
+    <!-- jQuery  -->
+    <script src="../plugins/jquery/jQuery.min.js"></script>
+    <script src="../plugins/jQueryUI/jquery-ui.min.js"></script>
+    <!-- Bootstrap  -->
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- DDSC javascripts -->
+    <script src="../js/ddsc.min.js"></script>
+    <script src="../js/app.min.js"></script>
+    <!-- fullCalendar 2.2.5 -->
+    <script src="../plugins/moment/moment-with-locales.js"></script>
+    <script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script type="text/javascript">
+        init.push(function () {
+            // Javascript code here
+        })
+        window.ddsc.start(init);
+    </script>
+    <!-- jquery countdown -->
+    <script src="../plugins/jQuery/jquery.countdown-2.1.0/jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+        function gettimeFromNow() {
+            return new Date(new Date().valueOf() + 30 * 60 * 1000);
+        }
+        var $clock = $('#clock');
+        $clock.countdown(gettimeFromNow(), function (event) {
+            $(this).html(event.strftime('%M:%S'));
+        });
+        $('#btn-reset').click(function () {
+            $clock.countdown(gettimeFromNow());
+        });
+    </script>
+    <!-- date-range-picker -->
+    <script src="../plugins/daterangepicker/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <script>
+        $(function () {
+            //Date range picker
+            $('input[name="daterange"]').daterangepicker(
+                {
+                    singleDatePicker: false,
+                    showDropdowns: true,
+                    showWeekNumbers: false,
+                    timePicker: false,
+                    timePicker24Hour: false,
+                    timePickerSeconds: false,
+                    autoApply: true,
+                    opens: 'center',
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary',
+                    cancelClass: 'btn-small',
+                    firstDay: 1,
+                    separator: " - ",
+                    // 預設查最近7天
+                    startDate: moment().subtract(6,'days'),
+                    endDate: moment(),
+                    // 最大日放在後7天，查預約交易
+                    maxDate:moment().add(7,'days'),
+                    // 最多查5年內的資料
+                    minDate: moment().subtract(5,'years'),
+                    // 資料範圍30天
+                    dateLimit: {
+                        "days": 30
+                    },
+                    ranges: {
+                        '今天': [moment(), moment()],
+                        '昨天': [moment().subtract(1,'days'), moment().subtract(1,'days')],
+                        '最近7天': [moment().subtract(6,'days'), moment()],
+                        '最近30天': [moment().subtract(29,'days'), moment()],
+                        '本月': [moment().startOf('month'), moment().endOf('month')],
+                        '上個月': [moment().subtract(1,'month').startOf('month'), moment().subtract(1,'month').endOf('month')]
+                    },
+                    locale: {
+                        format: "YYYY/MM/DD",
+                        applyLabel: '<i class="glyphicon glyphicon-ok"></i>',
+                        cancelLabel: '<i class="glyphicon glyphicon-remove"></i>',
+                        fromLabel: '起',
+                        toLabel: '訖',
+                        customRangeLabel: '自訂範圍',
+                        daysOfWeek: ['日','一','二','三','四','五','六'],
+                        monthNames: ['1 月','2 月','3 月','4 月','5 月','6 月','7 月','8 月','9 月','10 月','11 月','12 月'],
+                    }
+                });
+        });
+    </script>
+    <!-- DataTables -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#table1').DataTable({
+                //"dom": 'l<"addbutton">frtip',
+                dom:
+                    "<'row'<'col-sm-4'l><'col-sm-8'<'newRecord'>>>" +
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                destroy: true,
+                paging: true,
+                info: true,
+                searching: false,
+                ordering: true,
+                order: [[ 2, "desc" ]],  // 預設排序
+                orderMulti: false,
+                autoWidth: false,
+                pageLength: 5,
+                lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "全部"]],
+                processing: true,
+                pagingType: 'full_numbers',
+                decimal: ",",
+                language: {
+                    "processing":   "處理中...",
+                    "loadingRecords": "載入中...",
+                    "lengthMenu":   "一頁顯示 _MENU_ 筆資料",
+                    "zeroRecords":  "沒有符合的結果",
+                    "info":         "顯示第 _START_ 至 _END_ 筆資料，共 _TOTAL_ 筆",
+                    "infoEmpty":    "顯示第 0 至 0 筆資料，共 0 筆",
+                    "infoFiltered": "(從 _MAX_ 筆資料中過濾)",
+                    "infoPostFix":  "",
+                    "search":       "搜尋:",
+                    "url":          "",
+                    "paginate": {
+                            'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                            'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                            'previous': '<i class="fa fa-chevron-left"></i>',
+                            'next': '<i class="fa fa-chevron-right"></i>'
+                    },
+                    "Aria": {
+                        "sortAscending":  ": 小 ->大排列",
+                        "sortDescending": ": 大->小 排列"
+                    }
+                },
+                "columnDefs": [
+                  { "orderable": false, "targets": [0,1,8] }
+                ]
+            });
+            $("div.newRecord").html(' <a  class="btn btn-primary pull-right" role="button" data-toggle="modal" data-target="#visitModal"><i class="glyphicon glyphicon-plus margin-r-5"></i>新增</a>');
+        });
+    </script>
+    <!-- Bootstrap Datepicker-->
+    <script>
+        init.push(function () {
+            var options = {
+                todayBtn: "linked",
+                orientation: $('body').hasClass('right-to-left') ? "auto right" : 'auto auto'
+            }
+            $('#bs-datepicker-example').datepicker(options);
+
+            $('#bs-datepicker-component').datepicker();
+
+            var options2 = {
+                orientation: $('body').hasClass('right-to-left') ? "auto right" : 'auto auto'
+            }
+            $('#bs-datepicker-range').datepicker(options2);
+
+            $('#bs-datepicker-inline').datepicker();
+        });
+    </script>
+    <!-- / Bootstrap Datepicker -->
+    <!--	jQuery Validation -->
+    <script>
+        init.push(function () {
+            // Setup validation
+            $("#jq-validation-form").validate({
+                ignore: '.ignore, .select2-input',
+                focusInvalid: false,
+                rules: {
+                    'jq-validation-required': {
+                        required: true
+                    },
+                    'jq-validation-select1': {
+                        required: true
+                    },
+                    'jq-validation-select2': {
+                        required: true
+                    },
+                    'jq-validation-text': {
+                        required: true
+                    }
+                },
+                messages: {
+                    'jq-validation-required': '不可為空白',
+                    'jq-validation-select1': '請選擇',
+                    'jq-validation-select2': '請選擇'
+                }
+            });
+        });
+    </script>
+    <!-- 控制 modal show & hidden 時 將 iframe 設為 null，如此下次新增才會重新 load ，否則畫面會呈現上次輸入資料 -->
+    <script>
+        $('#visitModal').on('shown.bs.modal', function (event) {
+            $(this).find('iframe').attr("src", "VisitLogDetail.html");
+        });
+        $('#visitModal').on('hidden.bs.modal', function () {
+            $(this).find('iframe').html("");
+            $(this).find('iframe').attr("src", "");
+        });
+    </script>
+    <!-- / Javascript -->
+</body>
+</html>
