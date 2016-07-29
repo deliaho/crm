@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="signin.html">
+                                    <a href="Signin.html">
                                         <i class="nav-icon glyphicon glyphicon-log-out" style="color: #00a850;"></i>
                                         <span class="small-screen-text">登出</span>
                                         <span id="clock" class="label bg-danger"></span>
@@ -112,8 +112,8 @@
                         <div class="text-bg"><span class="text-slim">服務客戶</span> <span class="text-semibold">錢大戶</span></div>
                         <!--<img src="../images/user.jpg" alt="" class="">-->
                         <div class="btn-group">
-                            <a href="#" class="btn btn-primary"><i class="fa fa-eye"> 全覽</i></a>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-comment"> 新增訪談</i></a>
+                            <a href="CustomerInfo.html" class="btn btn-primary"><i class="fa-icon fa fa-eye"> 全覽</i></a>
+                            <a href="VisitLog.html" class="btn btn-primary"><i class="fa fa-comment"> 新增訪談</i></a>
                         </div>
                     </div>
                 </div>
@@ -213,9 +213,9 @@
                                 <li class="list-group-item">客戶分級： </li>
                                 <li class="list-group-item">通訊電話： (02)9999-9999</li>
                                 <li class="list-group-item">手機電話： 0910-999-999 </li>
-                                <li class="list-group-item"><a href="#"><i class="fa fa-plus-square pull-right"></i>提醒事項：基金停損停利(1)</a></li>
+                                <li class="list-group-item"><a href="#"><i class="fa fa-plus-square-o pull-right"></i>提醒事項：基金停損停利(1)</a></li>
                                 <li class="list-group-item">通訊地址： 台北市內湖區行愛路151號</li>
-                                <li class="list-group-item"><a href="Transcation.html" target="_blank"><i class="fa fa-plus-square pull-right"></i>最近交易： 6/15 申購 CNY5,688</a></li>
+                                <li class="list-group-item"><a href="Transcation.html" target="_blank"><i class="fa fa-plus-square-o pull-right"></i>最近交易： 6/15 申購 CNY5,688</a></li>
                             </ul>
                         </div>
                     </div>
@@ -225,7 +225,8 @@
                             <div class="panel-heading">
                                 <span class="panel-title"><i class="panel-title-icon fa fa-comments text-success"></i>訪談紀錄</span>
                                 <div class="panel-heading-controls">
-                                    <button class="btn btn-primary" title="進階查詢" onclick="window.open('VisitLog.html', '_blank')"><i class="fa fa-plus"></i></button>
+                                    <a href="VisitLog.html" target="_blank"><i class="fa fa-plus-square-o fa-2x text-success"></i></a>
+                                    <!-- <button class="btn btn-primary" title="進階查詢" onclick="window.open('VisitLog.html', '_blank')"><i class="fa fa-info-circle"></i></button>-->
                                 </div>
                             </div>
                             <!-- /.panel-heading -->
@@ -288,7 +289,8 @@
                                 <div class="panel-heading with-border">
                                     <span class="panel-title"><i class="panel-title-icon fa fa-pie-chart text-success"></i>整體資產</span>
                                     <div class="panel-heading-controls">
-                                        <button class="btn btn-primary" title="進階查詢" onclick="window.open('GainLoss.html', '_blank')"><i class="fa fa-plus"></i></button>
+                                        <a href="GainLoss.html" target="_blank"><i class="fa fa-plus-square-o fa-2x text-success"></i></a>
+                                        <!-- <button class="btn btn-primary" title="進階查詢" onclick="window.open('GainLoss.html', '_blank')"><i class="fa fa-plus-square-o"></i></button>-->
                                     </div>
                                 </div>
                                 <div class="panel-body">
@@ -304,6 +306,9 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading with-border">
                                     <span class="panel-title"><i class="panel-title-icon fa fa-cube text-success"></i>投資庫存</span>
+                                    <div class="panel-heading-controls">
+                                        <a href="Position.html" target="_blank"><i class="fa fa-plus-square-o fa-2x text-success"></i></a>
+                                    </div>
                                 </div>
                                 <div class="panel-body" style="min-height:400px;">
                                     <ul id="uidemo-tabs-default-demo" class="nav nav-tabs">
@@ -552,6 +557,7 @@
     <script>
         $(function () {
             Highcharts.setOptions({
+                colors: ["#0EAD69", "#3BCEAC", "#FFD23F", "#EE4266", "#540D6E"],
                 chart: {
                     style: {
                         fontFamily: 'Microsoft JhengHei'
@@ -582,7 +588,7 @@
                         cursor: 'pointer',
                         dataLabels: {
                             enabled: true,
-                            format: '<b>{point.name}</b>: <b>${point.y:,.0f} 元</b>',
+                            format: '{point.name} <br/> ${point.y:,.0f}',
 
                             style: {
                                 color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
