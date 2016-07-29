@@ -8377,6 +8377,7 @@ h1 .label, h2 .label, h3 .label, h4 .label, h5 .label, h6 .label
 .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > th
 {
     font-weight: 600;
+    background: #fafafa;
 }
 
 .table tbody + tbody
