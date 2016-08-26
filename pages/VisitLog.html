@@ -441,7 +441,7 @@
                                     <h4 class="modal-title" id="myModalLabel">訪談紀錄</h4>
                                 </div>
                                 <div class="modal-body no-padding">
-                                    <iframe class="col-md-12 no-border no-padding" height="830"></iframe>
+                                    <iframe class="col-xs-12 no-border no-padding" height="830" ></iframe>
                                 </div>
                                 <!-- / .modal-body -->
                                 <div class="modal-footer">
@@ -648,6 +648,7 @@
     </script>
     <!-- 控制 modal show & hidden 時 將 iframe 設為 null，如此下次新增才會重新 load ，否則畫面會呈現上次輸入資料 -->
     <script>
+
         $('#visitModal').on('shown.bs.modal', function (event) {
             $(this).find('iframe').attr("src", "VisitLogDetail.html");
         });
